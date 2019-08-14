@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>DataJs</title>
+    <meta name="description" content="A simple and lightweight Javascript events listener">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../jquery.datajs.obfus.js"></script>
+</head>
+<body>
+
+<a href="#" data-js="front={mouseover|click|dblclick:printEvent;mouseout:alertBye}">Hey you, hover me, click me, doubleclick me or out me!</a>
+
+<p id="events_type">Event: <span></span></p>
+
+<script type="text/javascript">
+$(function(){
+
+    "use strict";
+
+    $.dataJs({
+        front: {
+            printEvent: function( $trigger, e, dataJs){
+                $('#events_type span').text( e.type );
+                console.log( $trigger, e, dataJs );
+            },
+            alertBye: function( $trigger, e, dataJs){
+                $('#events_type span').text( e.type );
+                alert('Bye!');
+                console.log( $trigger, e, dataJs );
+            }
+        }
+    });
+});
+</script>
+
+</body>
+</html>
