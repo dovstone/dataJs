@@ -4,22 +4,23 @@ DataJs is as simple and lightweight Javascript events listener.
 ## Syntax
 We use html5 data attribute approach to bind our event.   
 
-Here is the basic syntax to attach a single event: `data-js="front={click:helloWorld}"`.    
+Here is the syntax to bind a single event: `data-js="front={click:helloWorld}"`.    
+Here is the syntax to bind multiple events: `data-js="front={click|keyup:helloPlanet;mouseover:heyYou}"`.    
 
-**Explanation**   
+### Explanation  
 - `data-js`   
 html5 attribute **data-** followed by **js** tells the plugin that this element is going to be bound by an event.    
 
 - `front`   
-**front** is an arbitrairy key we use. See it as an object of our element's event.   
-Case sensitive.   
+**front** is an arbitrairy key we use. See it as the name of the object of our element's event. It is case sensitive.   
 
-- `click`   
-**click** is the type of our javascript native event we need to bind to our element.    
+- `click` ,  `keyup` , `mouseover`      
+These are the types of our javascript native events we need to bind to our element.    
 
-- `helloWorld`   
-**helloWorld** is the callback. It takes three parameters.   
-Case sensitive.   
+- `helloWorld`, `helloPlanet`, `heyYou`     
+These are arbitrairy callbacks, chosen for example. They individually take three parameters. There are case sensitive.   
+
+#### Single event
 
 Notice the following symbols: `=`, `{`, `:` and `}`.    
 In one word, think of this syntax as your are declaring a classic variable object that contains a function. Such as this following code that we would do:    
@@ -40,6 +41,7 @@ The above code will be as follow:
       $(function(){
             $.dataJs({
                 front: {
+                  // triggered on "click" event type
                   helloWorld: function( $trigger, e, dataJs ){
                     // your code goes here...
                   }
@@ -48,6 +50,41 @@ The above code will be as follow:
       });
     </script>
 
+
+#### Multiple events
+
+Notice the following symbols added: `|` and `;`.    
+**|** is used to separate multiple javascript native events types while **;** is used to separate blocks of events.     
+In one word, think of this syntax as your are declaring a classic variable object that contains multiple functions. Such as this following code that we would do:    
+
+    <script>
+      $(function(){
+            var front = {
+                helloPlanet: function(){
+                  // your code goes here...
+                }
+            }
+      });
+    </script>
+
+The above code will be as follow:
+
+    <script>
+      $(function(){
+            $.dataJs({
+                front: {
+                  // triggered both on "click" and "keyup" events type
+                  helloPlanet: function( $trigger, e, dataJs ){
+                    // your code goes here...
+                  },
+                  // triggered on "mouseover" event type
+                  heyYou: function( $trigger, e, dataJs ){
+                    // your code goes here...
+                  }
+                }
+            });
+      });
+    </script>
 
 ## Parameters
 The callback accept three parameters, **$trigger**, **e**, **dataJs**.    
