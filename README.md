@@ -20,7 +20,7 @@ These are the types of our javascript native events we need to bind to our eleme
 - `helloWorld`, `helloPlanet`, `heyYou`     
 These are arbitrairy callbacks, chosen for example. They individually take three parameters. There are case sensitive.   
 
-#### Single event
+### Single event
 
 Notice the following symbols: `=`, `{`, `:` and `}`.    
 In one word, think of this syntax as your are declaring a classic variable object that contains a function. Such as this following code that we would do:    
@@ -51,7 +51,7 @@ The above code will be as follow:
     </script>
 
 
-#### Multiple events
+### Multiple events
 
 Notice the following symbols added: `|` and `;`.    
 **|** is used to separate multiple javascript native events types while **;** is used to separate blocks of events.     
