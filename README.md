@@ -54,13 +54,16 @@ The above code will be as follow:
 ## Binding Multiple events
 
 Notice the following symbols added: `|` and `;`.    
-**|** is used to separate multiple javascript native events types while **;** is used to separate blocks of events.     
+`|` is used to separate multiple javascript native events types and `;` to separate blocks of events.     
 In one word, think of this syntax as your are declaring a classic constant object that contains multiple functions. Such as this following code that we would do:    
 
     <script>
       $(function(){
             const front = {
                 helloPlanet: function(){
+                  // your code goes here...
+                },
+                heyYou: function(){
                   // your code goes here...
                 }
             }
@@ -73,7 +76,7 @@ The above code will be as follow:
       $(function(){
             $.dataJs({
                 front: {
-                  // triggered both on "click" and "keyup" events type
+                  // triggered on both "click" and "keyup" events type
                   helloPlanet: function( $trigger, e, dataJs ){
                     // your code goes here...
                   },
@@ -87,7 +90,7 @@ The above code will be as follow:
     </script>
 
 ## Parameters
-The callback accept three parameters, **$trigger**, **e**, **dataJs**.    
+The callback accepts three parameters, **$trigger**, **e**, **dataJs**.    
 
 - `$trigger`   
 The jQuery model of the element we bound the event on.  
