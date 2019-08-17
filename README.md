@@ -18,7 +18,7 @@ html5 attribute **data-** followed by **js** tells the plugin that this element 
 These are the types of our javascript native events we need to bind to our element.    
 
 - `helloWorld`, `helloPlanet`, `heyYou`     
-These are arbitrairy callbacks, chosen for example. They individually take three parameters. There are case sensitive.   
+These are arbitrairies callbacks, chosen for example. They individually take three parameters. There are case sensitive.   
 
 ## Binding Single event
 
