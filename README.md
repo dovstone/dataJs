@@ -23,11 +23,11 @@ These are arbitrary callbacks, chosen for the example. They individually take th
 ## Binding Single event
 
 Notice the following symbols: `=`, `{`, `:` and `}`.    
-In one word, think of this syntax like your are declaring a classic variable object that contains a function. Such as this following code that we would do:    
+In one word, think of this syntax like your are declaring a classic constant object that contains a function. Such as this following code that we would do:    
 
     <script>
       $(function(){
-            var front = {
+            const front = {
                 helloWorld: function(){
                   // your code goes here...
                 }
@@ -55,11 +55,11 @@ The above code will be as follow:
 
 Notice the following symbols added: `|` and `;`.    
 **|** is used to separate multiple javascript native events types while **;** is used to separate blocks of events.     
-In one word, think of this syntax as your are declaring a classic variable object that contains multiple functions. Such as this following code that we would do:    
+In one word, think of this syntax as your are declaring a classic constant object that contains multiple functions. Such as this following code that we would do:    
 
     <script>
       $(function(){
-            var front = {
+            const front = {
                 helloPlanet: function(){
                   // your code goes here...
                 }
