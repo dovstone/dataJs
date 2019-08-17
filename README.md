@@ -12,18 +12,18 @@ Here is the syntax to bind multiple events: `data-js="front={click|keyup:helloPl
 html5 attribute **data-** followed by **js** tells the plugin that this element is going to be bound by an event.    
 
 - `front`   
-**front** is an arbitrairy key we use. See it as the name of the object of our element's event. It is case sensitive.   
+**front** is an arbitrary key we use. See it as the name of the object of our element's event. It is case sensitive.   
 
 - `click` ,  `keyup` , `mouseover`      
 These are the types of our javascript native events we need to bind to our element.    
 
 - `helloWorld`, `helloPlanet`, `heyYou`     
-These are arbitrairies callbacks, chosen for example. They individually take three parameters. There are case sensitive.   
+These are arbitrary callbacks, chosen for the example. They individually take three parameters. There are case sensitive.   
 
 ## Binding Single event
 
 Notice the following symbols: `=`, `{`, `:` and `}`.    
-In one word, think of this syntax as your are declaring a classic variable object that contains a function. Such as this following code that we would do:    
+In one word, think of this syntax like your are declaring a classic variable object that contains a function. Such as this following code that we would do:    
 
     <script>
       $(function(){
