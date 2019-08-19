@@ -79,4 +79,4 @@
         return target.split(search).join(replacement);
     };
 
-}( jQuery ));
+})( jQuery );
